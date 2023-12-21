@@ -10,11 +10,8 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
-  late String email = emailController.text;
-  late String userPassword = passwordController.text;
+  late String email;
+  late String userPassword;
 
   late int mailIndex = email.indexOf('@');
   late String actualPassword = email.substring(0, mailIndex);
@@ -161,7 +158,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                     height: 20,
                                   ),
                                   TextField(
-                                    controller: emailController,
+                                    onChanged: (value) => email = value,
                                     keyboardType: TextInputType.emailAddress,
                                     decoration: const InputDecoration(
                                       focusedBorder: OutlineInputBorder(
@@ -193,7 +190,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                   ),
                                   TextField(
                                     obscureText: true,
-                                    controller: passwordController,
+                                    onChanged: (value) => userPassword = value,
                                     keyboardType: TextInputType.text,
                                     decoration: const InputDecoration(
                                         focusedBorder: OutlineInputBorder(
