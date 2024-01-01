@@ -67,6 +67,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               bottomLeft: Radius.circular(80))),
                       child: const Column(
                         children: [
+                          SizedBox(height: 40),
                           Image(
                               width: 120,
                               height: 120,
@@ -74,19 +75,18 @@ class _SignInScreenState extends State<SignInScreen> {
                         ],
                       ),
                     ),
+                    SizedBox(height: 40),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(
-                          height: 110,
-                        ),
+                        const SizedBox(height: 150),
                         Center(
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 1.8,
+                            height: MediaQuery.of(context).size.height / 2.15,
                             width: MediaQuery.of(context).size.width / 1.1,
                             decoration: BoxDecoration(
                                 color: const Color.fromARGB(255, 245, 238, 238),
-                                borderRadius: BorderRadius.circular(15)),
+                                borderRadius: BorderRadius.circular(22)),
                             child: Padding(
                               padding:
                                   const EdgeInsets.only(right: 13, left: 13),
@@ -228,7 +228,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                         color: majorColour, fontSize: 15),
                                   ),
                                   const SizedBox(
-                                    height: 10,
+                                    height: 40,
                                   ),
                                   InkWell(
                                     onTap: loginController,

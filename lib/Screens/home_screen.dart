@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 40,
           ),
           Expanded(
             child: Column(
@@ -170,6 +170,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ),
                           ),
+                          SizedBox(
+                            height: 40,
+                          )
                         ],
                       ),
                     ),
@@ -183,4 +186,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
