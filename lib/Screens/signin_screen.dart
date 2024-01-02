@@ -58,31 +58,33 @@ class _SignInScreenState extends State<SignInScreen> {
                   //alignment: Alignment.bottomCenter,
                   children: [
                     Container(
-                      height: MediaQuery.of(context).size.height / 2.4,
+                      height: MediaQuery.of(context).size.height * 0.42,
                       width: double.infinity,
                       decoration: const BoxDecoration(
                           color: majorColour,
                           borderRadius: BorderRadius.only(
                               bottomRight: Radius.circular(80),
                               bottomLeft: Radius.circular(80))),
-                      child: const Column(
+                      child: Column(
                         children: [
-                          SizedBox(height: 40),
-                          Image(
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.035),
+                          const Image(
                               width: 120,
                               height: 120,
                               image: AssetImage('assets/images/logo2.png')),
                         ],
                       ),
                     ),
-                    SizedBox(height: 40),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(height: 150),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.17),
                         Center(
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 2.15,
+                            height: MediaQuery.of(context).size.height * 0.46,
                             width: MediaQuery.of(context).size.width / 1.1,
                             decoration: BoxDecoration(
                                 color: const Color.fromARGB(255, 245, 238, 238),
@@ -93,8 +95,9 @@ class _SignInScreenState extends State<SignInScreen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const SizedBox(
-                                    height: 25,
+                                  SizedBox(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.015,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -154,9 +157,10 @@ class _SignInScreenState extends State<SignInScreen> {
                                       ),
                                     ],
                                   ),
-                                  const SizedBox(
-                                    height: 20,
-                                  ),
+                                  SizedBox(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.018),
                                   TextField(
                                     onChanged: (value) => email = value,
                                     keyboardType: TextInputType.emailAddress,
@@ -185,8 +189,9 @@ class _SignInScreenState extends State<SignInScreen> {
                                       enabled: true,
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 20,
+                                  SizedBox(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.018,
                                   ),
                                   TextField(
                                     obscureText: true,
@@ -218,18 +223,20 @@ class _SignInScreenState extends State<SignInScreen> {
                                         suffixIcon: Icon(Icons.visibility),
                                         suffixIconColor: Colors.black),
                                   ),
-                                  const SizedBox(
-                                    height: 13,
-                                  ),
+                                  SizedBox(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.015),
                                   const Text(
                                     'Forgot Password?',
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
                                         color: majorColour, fontSize: 15),
                                   ),
-                                  const SizedBox(
-                                    height: 40,
-                                  ),
+                                  SizedBox(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.025),
                                   InkWell(
                                     onTap: loginController,
                                     child: Container(

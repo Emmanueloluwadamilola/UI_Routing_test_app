@@ -9,7 +9,7 @@ class ExpandedCard extends StatelessWidget {
     required this.cardIcon,
     required this.cardText,
   });
-  final  cardPadding;
+  final cardPadding;
   final IconData cardIcon;
   final String cardText;
 
@@ -27,12 +27,14 @@ class ExpandedCard extends StatelessWidget {
             children: [
               CircleAvatar(
                 backgroundColor: Colors.white,
-                radius: 20,
+                minRadius: 13,
+                //radius: 20,
                 child: FaIcon(
                   cardIcon,
                   color: majorColour,
                 ),
               ),
+              SizedBox(height: 5,),
               Text(
                 cardText,
                 style: const TextStyle(),

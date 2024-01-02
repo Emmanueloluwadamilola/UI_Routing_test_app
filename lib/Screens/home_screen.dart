@@ -119,12 +119,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(15),
                             topRight: Radius.circular(15))),
-                    child: const Padding(
-                      padding: EdgeInsets.only(
-                          top: 15, left: 20, right: 20, bottom: 10),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          top: 15, left: 20, right: 20, bottom: 5),
                       child: Column(
                         children: [
-                          Expanded(
+                          const Expanded(
                             child: Row(
                               children: [
                                 ExpandedCard(
@@ -140,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ),
                           ),
-                          Expanded(
+                          const Expanded(
                             child: Row(
                               children: [
                                 ExpandedCard(
@@ -155,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ),
                           ),
-                          Expanded(
+                          const Expanded(
                             child: Row(
                               children: [
                                 ExpandedCard(
@@ -171,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           SizedBox(
-                            height: 40,
+                            height: MediaQuery.of(context).size.height * 0.046,
                           )
                         ],
                       ),
